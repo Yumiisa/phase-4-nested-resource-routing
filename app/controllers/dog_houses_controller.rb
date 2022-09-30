@@ -3,12 +3,8 @@ class DogHousesController < ApplicationController
 
   def show
     dog_house = DogHouse.find(params[:id])
-    reviews=dog_house.reviews
-    render json:reviews, inlude: :dog_house
-  end
-  def reviews
-    review=Review.find(params[:id])
-    render json:review, inlude: :dog_house
+  
+    render json:reviews, 
   end
 
   private
